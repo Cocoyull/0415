@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SophiCar - 实验与资源中心</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./resources.styles.css" />
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">SophiCar</div>
+      <nav class="nav">
+        <a href="./home.index.html">首页</a>
+        <a href="./modeling/index.html">参数化建模</a>
+        <div class="nav-item">
+          <a href="./case1/index.html">案例库</a>
+          <div class="nav-dropdown" role="menu" aria-label="案例库子菜单">
+            <a href="./case1/index.html" role="menuitem">导览车</a>
+            <a href="./case2/index.html" role="menuitem">运输车</a>
+            <a href="./case3/index.html" role="menuitem">扫地机器人</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="./resources/index.html" class="active about-link">实验与资源中心</a>
+          <div class="nav-dropdown" role="menu" aria-label="实验与资源中心子菜单">
+            <a href="#scene-category" role="menuitem">实验场景分类</a>
+            <a href="#teaching-resources" role="menuitem">配套教学资源</a>
+          </div>
+        </div>
+        <a href="./about-us/index.html">关于我们</a>
+      </nav>
+      <div class="icons" aria-label="language and profile">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+          <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" />
+          <path d="M12 3c2.6 2.3 4 5.7 4 9s-1.4 6.7-4 9c-2.6-2.3-4-5.7-4-9s1.4-6.7 4-9Z" stroke="currentColor" stroke-width="1.8" />
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.8" />
+          <path d="M5.5 20c.8-3.4 3.3-5 6.5-5s5.7 1.6 6.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </div>
+    </header>
+
+    <main class="resource-center">
+      <section class="carousel" aria-label="实验项目轮播">
+        <div id="scene-category" class="anchor-offset" aria-hidden="true"></div>
+        <div id="teaching-resources" class="anchor-offset" aria-hidden="true"></div>
+        <div class="carousel-window">
+          <ul class="carousel-track">
+            <li class="card">
+              <img src="./resources.image/ISO.jpg" alt="快速开始" />
+              <div class="card-body">
+                <h3>快速开始</h3>
+                <p>从零上手实验平台，快速了解流程、操作规范与基础功能。</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./resources.image/TS.webp" alt="机械结构" />
+              <div class="card-body">
+                <h3>机械结构</h3>
+                <p>围绕底盘、传动与关键部件，系统掌握结构设计与装调逻辑。</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./resources.image/电池包穿刺.jpeg" alt="电子与电气" />
+              <div class="card-body">
+                <h3>电子与电气</h3>
+                <p>覆盖电源管理、线束连接与电气安全的核心教学内容。</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./resources.image/NVH.png" alt="控制单元" />
+              <div class="card-body">
+                <h3>控制单元</h3>
+                <p>聚焦控制器架构与策略实现，理解系统级协同控制机制。</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./resources.image/传感与数据分析.jpg" alt="感知单元" />
+              <div class="card-body">
+                <h3>感知单元</h3>
+                <p>学习多传感器融合与数据处理，提升环境感知与识别能力。</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./resources.image/盐雾.jpeg" alt="通信协议" />
+              <div class="card-body">
+                <h3>通信协议</h3>
+                <p>面向车载通信链路，讲解常用协议与数据交互规范。</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./resources.image/CMF.webp" alt="代码与API" />
+              <div class="card-body">
+                <h3>代码与API</h3>
+                <p>提供接口调用示例与代码实践，支持快速接入二次开发。</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="./resources.image/IP防护.webp" alt="FAQ" />
+              <div class="card-body">
+                <h3>FAQ</h3>
+                <p>汇总高频问题与解决建议，帮助教学与实验过程高效推进。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="arrow arrow-left" type="button" aria-label="上一组" data-dir="prev">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M14.5 5L8 12l6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <button class="arrow arrow-right" type="button" aria-label="下一组" data-dir="next">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9.5 5L16 12l-6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </section>
+    </main>
+
+    <script src="./resources.script.js"></script>
+  </body>
+</html>

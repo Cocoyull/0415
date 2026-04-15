@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SophiCar - 扫地机器人</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Righteous&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./case3.styles.css" />
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">SophiCar</div>
+      <nav class="nav">
+        <a href="./home.index.html">首页</a>
+        <a href="./modeling/index.html">参数化建模</a>
+        <div class="nav-item case-nav-item">
+          <a href="./case1/index.html" class="active about-link">案例库</a>
+          <div class="nav-dropdown" role="menu" aria-label="案例库子菜单">
+            <a href="./case1/index.html" role="menuitem">导览车</a>
+            <a href="./case2/index.html" role="menuitem">运输车</a>
+            <a href="./case3/index.html" role="menuitem">扫地机器人</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="./resources/index.html">实验与资源中心</a>
+          <div class="nav-dropdown" role="menu" aria-label="实验与资源中心子菜单">
+            <a href="./resources/index.html#scene-category" role="menuitem">实验场景分类</a>
+            <a href="./resources/index.html#teaching-resources" role="menuitem">配套教学资源</a>
+          </div>
+        </div>
+        <a href="./about-us/index.html">关于我们</a>
+      </nav>
+      <div class="icons" aria-label="language and profile">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+          <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" />
+          <path
+            d="M12 3c2.6 2.3 4 5.7 4 9s-1.4 6.7-4 9c-2.6-2.3-4-5.7-4-9s1.4-6.7 4-9Z"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.8" />
+          <path
+            d="M5.5 20c.8-3.4 3.3-5 6.5-5s5.7 1.6 6.5 5"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img src="./case3.image/hero.png" alt="扫地机器人主视觉" class="hero-image" />
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h1>SOPHICAR智扫先锋</h1>
+          <p>智行净域，洁行每一寸道路</p>
+        </div>
+      </section>
+
+      <section class="mosaic" aria-label="扫地机器人主要模块">
+        <div class="mosaic-shell">
+          <div class="tile-grid">
+            <article class="tile tile-media" aria-label="产品细节图">
+              <img src="./case3.image/1.png" alt="扫地机器人细节" />
+            </article>
+
+            <article class="tile tile-copy tile-stats">
+              <h2>SIPHICAR缠绕双悬臂对刷</h2>
+              <p>
+                适配复杂路面与边角贴合清扫，双悬臂结构带来更稳定的接触压力与更强的容错能力，提升覆盖率与持续清洁效率。
+              </p>
+              <div class="stats" aria-label="性能数据">
+                <div class="stat">
+                  <div class="stat-value">100<span>%</span></div>
+                  <div class="stat-label">清扫效率</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">0<span>%</span></div>
+                  <div class="stat-label">二次污染残留</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="tile tile-copy tile-stats">
+              <h2>全视角 AI 视觉感知系统</h2>
+              <p>
+                采集环境与障碍物信息，建立更细粒度的语义理解；支持 360° 视野覆盖，实现识别、避障与路径规划协同。
+              </p>
+              <div class="stats" aria-label="性能数据">
+                <div class="stat">
+                  <div class="stat-value">100<span>%</span></div>
+                  <div class="stat-label">识别准确率</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">0<span>%</span></div>
+                  <div class="stat-label">误检率</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="tile tile-media">
+              <img src="./case3.image/2.png" alt="扫地机器人街景作业" />
+            </article>
+
+            <article class="tile tile-media tile-wide">
+              <img src="./case3.image/3.png" alt="扫地机器人底部结构" />
+            </article>
+
+            <article class="tile tile-copy tile-stats">
+              <h2>智慧升降底盘</h2>
+              <p>
+                自适应坡度与路缘变化，动态调节离地间隙；提升通过性与稳定性，兼顾效率、舒适与安全。
+              </p>
+              <div class="stats" aria-label="性能数据">
+                <div class="stat">
+                  <div class="stat-value">100<span>%</span></div>
+                  <div class="stat-label">稳定通过率</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">0<span>%</span></div>
+                  <div class="stat-label">卡滞概率</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" aria-label="关于 SophiCar 智吸清扫车">
+        <div class="about-shell">
+          <div class="about-grid">
+            <div class="about-media">
+              <img src="./case3.image/4.png" alt="扫地机器人俯视图" />
+            </div>
+            <article class="about-card">
+              <h2>关于 SophiCar<br />智吸清扫车</h2>
+              <p>
+                SophiCar 是一款面向城市精细化管理的智能清洁平台。它将感知、决策与执行融合于一体，在复杂道路环境中实现稳定的自主作业。
+                通过模块化的清洁组件与数据闭环，它能够持续优化清扫策略，降低运维负担，并提升城市清洁的效率与体验。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./case3.main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SophiCar - 参数化建模</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./modeling.styles.css" />
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">SophiCar</div>
+      <nav class="nav">
+        <a href="./home.index.html">首页</a>
+        <a href="./modeling/index.html" class="active">参数化建模</a>
+        <div class="nav-item case-nav-item">
+          <a href="./case1/index.html" class="about-link">案例库</a>
+          <div class="nav-dropdown" role="menu" aria-label="案例库子菜单">
+            <a href="./case1/index.html" role="menuitem">导览车</a>
+            <a href="./case2/index.html" role="menuitem">运输车</a>
+            <a href="./case3/index.html" role="menuitem">扫地机器人</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="./resources/index.html">实验与资源中心</a>
+          <div class="nav-dropdown" role="menu" aria-label="实验与资源中心子菜单">
+            <a href="./resources/index.html#scene-category" role="menuitem">实验场景分类</a>
+            <a href="./resources/index.html#teaching-resources" role="menuitem">配套教学资源</a>
+          </div>
+        </div>
+        <a href="./about-us/index.html">关于我们</a>
+      </nav>
+      <div class="icons" aria-label="language and profile">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+          <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" />
+          <path d="M12 3c2.6 2.3 4 5.7 4 9s-1.4 6.7-4 9c-2.6-2.3-4-5.7-4-9s1.4-6.7 4-9Z" stroke="currentColor" stroke-width="1.8" />
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.8" />
+          <path d="M5.5 20c.8-3.4 3.3-5 6.5-5s5.7 1.6 6.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="control-panel">
+        <div class="panel-head">
+          <h1>参数设置</h1>
+        </div>
+
+        <section class="form-block">
+          <label class="field-label" for="projectName">项目名</label>
+          <input id="projectName" class="text-input" type="text" placeholder="请输入项目名称" />
+          <p class="field-note">项目名称用于标识导出文件命名</p>
+        </section>
+
+        <section class="form-block">
+          <div class="field-label">参数组</div>
+          <div class="chip-row">
+            <button class="chip active" type="button">车型结构</button>
+            <button class="chip" type="button">轮胎参数</button>
+            <button class="chip" type="button">动力系统</button>
+            <button class="chip" type="button">附属结构</button>
+          </div>
+        </section>
+
+        <section class="slider-group">
+          <div class="slider-item">
+            <div class="slider-top">
+              <label for="lengthRange">总长度</label>
+              <div class="value-box"><input id="lengthNumber" type="number" value="550" /><span>mm</span></div>
+            </div>
+            <input id="lengthRange" class="slider" type="range" min="420" max="760" value="550" />
+            <div class="slider-foot">
+              <span>推荐值：550mm</span>
+              <button class="ghost-btn" type="button">应用推荐</button>
+            </div>
+          </div>
+
+          <div class="slider-item">
+            <div class="slider-top">
+              <label for="widthRange">载物台宽度</label>
+              <div class="value-box"><input id="widthNumber" type="number" value="260" /><span>mm</span></div>
+            </div>
+            <input id="widthRange" class="slider" type="range" min="180" max="360" value="260" />
+            <div class="slider-foot">
+              <span>推荐值：260mm</span>
+              <button class="ghost-btn" type="button">应用推荐</button>
+            </div>
+          </div>
+
+          <div class="slider-item">
+            <div class="slider-top">
+              <label for="trackRange">前后桥宽度</label>
+              <div class="value-box"><input id="trackNumber" type="number" value="300" /><span>mm</span></div>
+            </div>
+            <input id="trackRange" class="slider" type="range" min="220" max="420" value="300" />
+            <div class="slider-foot">
+              <span>推荐值：300mm</span>
+              <button class="ghost-btn" type="button">应用推荐</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="panel-actions">
+          <button class="primary-action action-dark" type="button">保存参数</button>
+          <button class="primary-action action-blue" type="button">下载导出</button>
+        </div>
+      </aside>
+
+      <section class="stage-area">
+        <div class="stage-actions">
+          <button id="openSceneModal" class="mini-btn mini-btn-blue" type="button">更换场景</button>
+          <button class="mini-btn" type="button">垂直视图</button>
+        </div>
+
+        <div class="stage-view">
+          <img id="mainSceneImage" class="scene-image scene-image-chassis" src="./modeling.image/线控底盘.png" alt="线控底盘模型" />
+        </div>
+      </section>
+    </main>
+
+    <div id="sceneModal" class="scene-modal hidden" aria-hidden="true">
+      <div class="scene-backdrop" data-close="modal"></div>
+      <div class="scene-dialog" role="dialog" aria-modal="true" aria-labelledby="sceneTitle">
+        <div class="scene-header">
+          <h2 id="sceneTitle">选择场景</h2>
+          <p>点击卡片进入对应场景</p>
+        </div>
+
+        <div class="scene-cards">
+          <button
+            class="scene-card is-selected"
+            type="button"
+            data-image="./modeling.image/线控底盘.png"
+            data-alt="线控底盘模型"
+            data-image-class="scene-image-chassis"
+          >
+            <img src="./modeling.image/线控底盘.png" alt="线控底盘" />
+            <span>线控底盘</span>
+          </button>
+          <button
+            class="scene-card"
+            type="button"
+            data-image="./modeling.image/教育小车.png"
+            data-alt="教育小车模型"
+            data-image-class="scene-image-edu"
+          >
+            <img src="./modeling.image/教育小车.png" alt="教育小车" />
+            <span>教育小车</span>
+          </button>
+          <button
+            class="scene-card"
+            type="button"
+            data-image="./modeling.image/导航小车.png"
+            data-alt="导航小车模型"
+            data-image-class="scene-image-nav"
+          >
+            <img src="./modeling.image/导航小车.png" alt="导航小车" />
+            <span>导航小车</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./modeling.script.js"></script>
+  </body>
+</html>

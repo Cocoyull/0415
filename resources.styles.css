@@ -1,0 +1,363 @@
+:root {
+  --bg: #03060d;
+  --text: #f4f9ff;
+  --accent: #009cff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #121418;
+  color: var(--text);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(950px 420px at 85% -12%, rgba(26, 141, 217, 0.14), transparent 62%),
+    radial-gradient(760px 360px at 8% 18%, rgba(10, 63, 116, 0.2), transparent 60%),
+    #121418;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 58px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 42px;
+  background: #121418;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: none;
+  z-index: 60;
+}
+
+.brand {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.005em;
+  font-size: 28px;
+  justify-self: start;
+  transform: translateX(6px);
+}
+
+.nav {
+  display: flex;
+  justify-self: center;
+  gap: 34px;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 58px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% - 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  padding: 4px 6px;
+  border-radius: 8px;
+  background: rgba(7, 20, 38, 0.96);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+  z-index: 80;
+}
+
+.nav-dropdown a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 6px 8px;
+  line-height: 1.1;
+  font-size: 13px;
+  color: #dfefff;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.nav-dropdown a::after {
+  display: none;
+}
+
+.nav-dropdown a:hover {
+  background: rgba(0, 156, 255, 0.14);
+  color: #57b6ff;
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav a {
+  color: #e7f2ff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 58px;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  height: 2px;
+  background: #009cff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms ease;
+}
+
+.nav a.active {
+  color: #009cff;
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e7f2ff;
+  opacity: 0.9;
+  justify-self: end;
+  transform: translateX(-2px);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.resource-center {
+  width: 100%;
+  margin: 0;
+  padding: 222px 0 56px 75px;
+  display: block;
+}
+
+.anchor-offset {
+  position: relative;
+  top: -72px;
+  height: 0;
+  pointer-events: none;
+}
+
+.carousel {
+  position: relative;
+  width: 1290px;
+  height: 520px;
+}
+
+.carousel-window {
+  position: relative;
+  width: 1290px;
+  height: 367px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 367px;
+}
+
+.card {
+  position: absolute;
+  width: 444px;
+  height: 367px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  transform-origin: top left;
+  transition:
+    left 1400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    top 1400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 1400ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 1400ms ease;
+}
+
+.card img {
+  width: 100%;
+  height: 277px;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px 30px 0 0;
+}
+
+.card-body {
+  width: 444px;
+  height: 90px;
+  padding: 10px 22px 14px;
+  border-radius: 0 0 30px 30px;
+  background: linear-gradient(to bottom, #2d2d2d 0%, #000000 100%);
+}
+
+.card.state-left {
+  left: 0;
+  top: 0;
+  transform: translateY(32px) scale(0.851351, 0.825613);
+  opacity: 1;
+  z-index: 2;
+}
+
+.card.state-center {
+  left: 423px;
+  top: 0;
+  transform: translateY(0) scale(1, 1);
+  opacity: 1;
+  z-index: 3;
+}
+
+.card.state-right {
+  left: 912px;
+  top: 0;
+  transform: translateY(32px) scale(0.851351, 0.825613);
+  opacity: 1;
+  z-index: 2;
+}
+
+.card.state-off-left {
+  left: -420px;
+  top: 0;
+  transform: translateY(32px) scale(0.851351, 0.825613);
+  opacity: 0;
+  z-index: 1;
+}
+
+.card.state-off-right {
+  left: 1332px;
+  top: 0;
+  transform: translateY(32px) scale(0.851351, 0.825613);
+  opacity: 0;
+  z-index: 1;
+}
+
+.card.state-hidden {
+  left: 1332px;
+  top: 0;
+  transform: translateY(32px) scale(0.851351, 0.825613);
+  opacity: 0;
+  z-index: 0;
+}
+
+.card h3 {
+  margin: 0;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 400;
+  color: #f6fbff;
+}
+
+.card p {
+  margin: 8px 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.38;
+  color: #ffffff;
+}
+
+.arrow {
+  position: absolute;
+  top: 438px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.arrow-left {
+  left: calc(50% - 117px);
+}
+
+.arrow-right {
+  left: calc(50% + 57px);
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.arrow svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 1280px) {
+  .resource-center {
+    justify-content: flex-start;
+    padding: 120px 20px 56px;
+  }
+
+  .carousel {
+    width: 100%;
+  }
+
+  .carousel-window {
+    width: 100%;
+  }
+
+  .arrow {
+    top: 420px;
+  }
+}
+
+@media (max-width: 720px) {
+  .brand {
+    font-size: 30px;
+  }
+
+  .topbar {
+    padding: 0 14px;
+  }
+}

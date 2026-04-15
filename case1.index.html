@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SophiCar - 导览车</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./case1.styles.css" />
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">SophiCar</div>
+      <nav class="nav">
+        <a href="./home.index.html">首页</a>
+        <a href="./modeling/index.html">参数化建模</a>
+        <div class="nav-item case-nav-item">
+          <a href="./case1/index.html" class="active about-link">案例库</a>
+          <div class="nav-dropdown" role="menu" aria-label="案例库子菜单">
+            <a href="./case1/index.html" role="menuitem">导览车</a>
+            <a href="./case2/index.html" role="menuitem">运输车</a>
+            <a href="./case3/index.html" role="menuitem">扫地机器人</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="./resources/index.html">实验与资源中心</a>
+          <div class="nav-dropdown" role="menu" aria-label="实验与资源中心子菜单">
+            <a href="./resources/index.html#scene-category" role="menuitem">实验场景分类</a>
+            <a href="./resources/index.html#teaching-resources" role="menuitem">配套教学资源</a>
+          </div>
+        </div>
+        <a href="./about-us/index.html">关于我们</a>
+      </nav>
+      <div class="icons" aria-label="language and profile">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+          <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" />
+          <path d="M12 3c2.6 2.3 4 5.7 4 9s-1.4 6.7-4 9c-2.6-2.3-4-5.7-4-9s1.4-6.7 4-9Z" stroke="currentColor" stroke-width="1.8" />
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.8" />
+          <path d="M5.5 20c.8-3.4 3.3-5 6.5-5s5.7 1.6 6.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img src="./case1.image/hero.JPG" alt="导览车主视觉" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>导 览 车</h1>
+          <div class="hero-divider" aria-hidden="true"></div>
+          <p>景区 · 园区 · 校园</p>
+        </div>
+      </section>
+
+      <section class="immersive">
+        <div class="container">
+          <h2>沉浸式漫游新体验</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+          <p>
+            自动驾驶技术正在重塑我们的出行与观光方式。导览车不再只是简单的接驳工具，而是一个可移动的沉浸式观景平台。凭借流畅的自动驾驶、全景视野与智能语音讲解，它让每一段园区、景区或校园的旅程，都变成一次安全、舒适且富有乐趣的探索体验。
+          </p>
+
+          <div class="circle-gallery" aria-label="导览车环形图片联播">
+            <div class="circle-stage">
+              <img class="circle-item" src="./case1.image/1.jpg" alt="导览车场景图 1" />
+              <img class="circle-item" src="./case1.image/2.jpg" alt="导览车场景图 2" />
+              <img class="circle-item" src="./case1.image/3.jpg" alt="导览车场景图 3" />
+              <img class="circle-item" src="./case1.image/4.jpg" alt="导览车场景图 4" />
+              <img class="circle-item" src="./case1.image/5.jpg" alt="导览车场景图 5" />
+              <img class="circle-item" src="./case1.image/6.jpg" alt="导览车场景图 6" />
+              <img class="circle-item" src="./case1.image/7.jpg" alt="导览车场景图 7" />
+              <img class="circle-item" src="./case1.image/8.png" alt="导览车场景图 8" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-car">
+        <div class="feature-image-wrap parallax-scene">
+          <img src="./case1.image/中间.png" alt="导览车产品展示" />
+          <div class="feature-card card-a" data-depth="18">
+            <h3>沉浸式观光</h3>
+            <p>告别匆忙打卡，让旅途本身成为最值得回味的风景。</p>
+          </div>
+          <div class="feature-card card-b" data-depth="26">
+            <h3>智能语音导览</h3>
+            <p>每经过一处景点，自动为你讲述背后的文化与故事。</p>
+          </div>
+          <div class="feature-card card-c" data-depth="20">
+            <h3>静音电动底盘</h3>
+            <p>无噪音、零排放，与自然和谐共处，不打扰沿途的宁静。</p>
+          </div>
+          <div class="feature-card card-d" data-depth="28">
+            <h3>随需停靠</h3>
+            <p>灵活响应乘客需求，想在哪里停就在哪里停。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grow-grid">
+        <article class="panel text-panel text-panel-primary">
+          <h2>GROWING<br />TOGETHER</h2>
+          <h3>收益分成</h3>
+          <p>
+            对于拥有长期场地资源与稳定客流的前瞻性合作伙伴——如景区、主题公园、大型园区或文旅小镇，
+            我们提供共创合作模式，共同开启智慧导览更新篇章。通过价值共创模型，导览车将高潜力场景转化为未来出行体验的试验场，
+            让每一次游客运营都成为可持续的收益来源。
+          </p>
+        </article>
+
+        <article class="panel image-panel image-panel-top">
+          <div class="image-panel-bg"></div>
+          <img src="./case1.image/底部1_副本.png" alt="导览车侧视图" />
+        </article>
+
+        <article class="panel image-panel image-panel-bottom">
+          <div class="image-panel-bg"></div>
+          <img src="./case1.image/底部2_副本.png" alt="导览车结构图" />
+        </article>
+
+        <article class="panel text-panel compact">
+          <div>
+            <h3>订阅</h3>
+            <p>
+              自动驾驶导览服务，灵活可扩展。无论是季节性的旅游旺季，还是长期的景区智慧化升级项目，订阅模式让您以最低的初始投入，快速接入导览车及其平台能力。按需订阅，按月付费，随时调整运营规模，轻松应对客流波动。
+            </p>
+          </div>
+          <div>
+            <h3>租赁</h3>
+            <p>
+              租赁模式让您无需承担车辆购置成本，即可将导览车纳入自有品牌生态。从节庆活动的短期激活，到文旅项目的长期部署，您可以根据实际需求灵活租赁。以可预测的固定成本，测试市场反应，扩大运营规模，服务更多游客，同时保持资金的健康流转。
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="./case1.main.js"></script>
+  </body>
+</html>

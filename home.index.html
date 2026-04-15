@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SophiCar - 首页</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Noto+Sans+SC:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./home.styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./home.index.html">SophiCar</a>
+        <nav class="nav">
+          <a class="active" href="./home.index.html">首页</a>
+          <a href="./modeling/index.html">参数化建模</a>
+          <a href="#cases">案例库</a>
+          <a href="./resources/index.html">实验与资源中心</a>
+          <a href="./about-us/index.html">关于我们</a>
+        </nav>
+        <div class="topbar-icons" aria-label="language and profile">
+          <button class="icon-button" type="button" aria-label="切换语言">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6" />
+              <path d="M3.5 12h17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              <path d="M12 3.5c2.5 2.4 4 5.5 4 8.5s-1.5 6.1-4 8.5c-2.5-2.4-4-5.5-4-8.5s1.5-6.1 4-8.5Z" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </button>
+          <button class="icon-button" type="button" aria-label="用户中心">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="8.2" r="3.2" stroke="currentColor" stroke-width="1.6" />
+              <path d="M5.5 19.2c1-3 3.3-4.6 6.5-4.6s5.5 1.6 6.5 4.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-media">
+            <img src="./home.image/hero.jpg" alt="SophiCar 智能车辆平台展示" />
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div class="hero-intro">
+            <img src="./home.image/logo.png" alt="SophiCar 标识" class="hero-logo" />
+            <p class="hero-tagline">Reshape The Journey<br />With Smart Sophistication.</p>
+          </div>
+
+          <div class="hero-stage" aria-hidden="true">
+            <div class="hero-word-mask">
+              <div class="hero-word-wrap">
+                <div class="hero-word">SOPHICAR</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-stack">
+          <section class="intro section-grid">
+            <div class="intro-title-block">
+              <h2>We Drive,<br />We Thrive.</h2>
+              <img src="./home.image/1.png" alt="SophiCar 智能小车" class="intro-car" />
+            </div>
+            <div class="intro-copy">
+              <p class="eyebrow">Sophicar</p>
+              <p>
+                Sophicar智驾聚焦智能汽车核心技术研发与解决方案落地，以参数化建模为基础，构建覆盖自动驾驶全链路的技术体系。我们融合高精度仿真、多场景实验验证与资源整合能力，为车企提供从算法研发到量产落地的全周期支持。依托自主研发的核心算法与硬件适配能力，已服务超50家车企及科研机构，在智能座舱、线控底盘、仿真测试等领域形成标准化产品矩阵，持续以技术创新降低智能汽车研发成本，加速智能驾驶技术的商业化落地。
+              </p>
+            </div>
+          </section>
+
+          <section class="solutions" id="cases">
+            <div class="section-heading">
+              <h2>一体化解决方案</h2>
+              <p>三大核心模块，覆盖教学、测试与车辆控制全场景。</p>
+            </div>
+
+            <div class="solution-wave">
+              <img src="./home.image/wave.png" alt="" aria-hidden="true" />
+
+              <div class="solution-grid">
+                <article class="solution-card">
+                  <img src="./home.image/2.png" alt="参数化教育套件" />
+                  <span>参数化教育套件</span>
+                </article>
+                <article class="solution-card">
+                  <img src="./home.image/3.png" alt="仿真与控制" />
+                  <span>仿真模拟器</span>
+                </article>
+                <article class="solution-card">
+                  <img src="./home.image/4.png" alt="线控底盘" />
+                  <span>线控底盘</span>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="partners">
+            <div class="section-heading compact">
+              <h2><span>生态</span>合作伙伴</h2>
+            </div>
+
+            <div class="partner-grid">
+              <span>材料供应</span>
+              <span>增材制造–MJF</span>
+              <span>增材制造–LCD</span>
+              <span>增材制造–FDM</span>
+              <span>工程模型</span>
+              <span>逆向工程</span>
+              <span>激光加工</span>
+              <span>云服务</span>
+              <span>CAD</span>
+              <span>工程计算</span>
+              <span>元器件与PCB制造</span>
+              <span>系统集成</span>
+            </div>
+          </section>
+
+          <footer class="contact">
+            <div class="contact-inner">
+              <div class="contact-copy">
+                <p class="contact-title">联系我们</p>
+                <p>
+                  对 sophicar 或我们的智能出行产品感兴趣？欢迎随时与我们联络。
+                </p>
+                <p>
+                  sophicar 期待与全球各领域的伙伴、创意者携手，共同推动智能交通与未来城市的融合进化。
+                </p>
+                <p class="contact-meta">E-mail：Bobwu@profabx.com</p>
+                <p class="contact-meta">Address：浙江省宁波市高新区清逸路215弄智造港D区3幢5楼</p>
+              </div>
+
+              <div class="contact-qr-block">
+                <p>获得更多关于产品的信息：</p>
+                <img src="./home.image/1_1070659725_171_85_3_1077320437_86032ab21fe98fd2c7b2a44059a1825d.png" alt="SophiCar 联系二维码" class="qr-code" />
+              </div>
+            </div>
+          </footer>
+        </section>
+      </main>
+    </div>
+
+    <script src="./home.script.js"></script>
+  </body>
+</html>
