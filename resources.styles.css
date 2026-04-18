@@ -167,9 +167,12 @@ body {
 
 .resource-center {
   width: 100%;
+  min-height: 100vh;
   margin: 0;
-  padding: 222px 0 56px 75px;
-  display: block;
+  padding: 140px 40px 56px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .anchor-offset {
